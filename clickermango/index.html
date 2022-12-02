@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css\style.css">
+    <title>Clicker Man Go</title>
+    <link rel="shortcut icon" href="https://i.imgur.com/tIpqVoG.png">
+  </head>
+  <body>
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <div class="title">Welcome to Blockman Clicker !</div>
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body">
+        All the minigames in Blockman Go has disappeared, and suddenly a mysterious game appeared.
+        <br> Help saving the Blockman World by obtaining all the minigames back!
+        <br>Click on Blockman to earn points
+        <br>Use points to unlock all the lost minigames.
+      </div>
+      <div class="modal-body2">
+        Music: Pix - Alien Wolves
+      </div>
+    </div>
+    <div id="overlay"></div>
+
+    <div class="container">
+      <div class="left">
+        <div class="points">
+          <p>Points: <span id="point">0</span></p> 
+          <p class="e">Earning: <span id="earning">0</span> PPS</p>
+        </div>
+        <div class="clicker">
+          <img class="imagine" src="https://i.imgur.com/tIpqVoG.png" onclick="addscore(1)">
+        </div>
+        
+      <ul id="current"></ul>
+
+      </div><div class="center"></div>
+
+      <div class="right">
+        <div class="shoptitle">
+          <p>SHOP</p>
+          <div class="musicctrl"><img src="image\musicon.png" id="toggle" onclick="togglesound()"></div>
+        </div>
+        <div class="shop">
+          <ul id="list"></ul>
+        </div>
+      </div>
+
+      <div class="box">
+        <div><img src="image\logo.png"></div>
+        <div><img src="image\logo.png"></div>
+        <div><img src="image\logo.png"></div>
+        <div><img src="image\logo.png"></div>
+        <div><img src="image\logo.png"></div>
+        <div><img src="image\logo.png"></div>
+        <div><img src="image\logo.png"></div>
+        <div><img src="image\logo.png"></div>
+      </div>
+    </div>
+
+    <script src="js\command.js"></script>
+  </body>
+</html>

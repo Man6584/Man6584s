@@ -1,0 +1,329 @@
+@font-face {
+    font-family: robot9000;
+    src: url(Robot9000-MVxZx.ttf) format('truetype');
+}
+@font-face {
+    font-family: kanit;
+    src: url(Kanit.ttf) format('truetype');
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+  }
+::-webkit-scrollbar-track{
+    background: transparent;
+  }
+::-webkit-scrollbar-thumb{
+    background: #888;
+    border-radius: 10px;
+  }
+::-webkit-scrollbar-thumb:hover{
+    background: #555;
+  }
+
+*{
+    cursor: url(https://i.imgur.com/vKml879.png), pointer;
+}
+
+body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: 200ms ease-in-out;
+    border: 2px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 800px;
+    max-width: 80%;
+    font-family: 'kanit', 'arial';
+  }
+  .modal.close {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  .modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+  }
+  .modal-header .title {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  .modal-header .close-button {
+    cursor: url(https://i.imgur.com/yYNG5CL.png),pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  .modal-body {
+    padding: 10px 15px;
+    font-size: 1.5rem;
+  }
+  .modal-body2 {
+    padding: 10px 15px;
+    font-size: 1rem;
+    text-align: end;
+  }
+  #overlay {
+    position: fixed;
+    opacity: 1;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: all;
+    z-index: 9;
+  }
+  #overlay.close {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 10px 1.5fr;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to bottom, #002439,#005066,#4e7988,#83ddf3);
+    position: absolute;
+    z-index: 0;
+}
+.box div{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    z-index: 1;
+}
+.box div img{
+    width: 150px;
+}
+    .box div:nth-child(1){
+        top: -100px;
+        left: 10%;
+        animation: animate 3s linear infinite;    
+    }
+    .box div:nth-child(2){
+        top: -100px;
+        left: -20px;
+        animation: animate 1.5s linear infinite;
+    }
+    .box div:nth-child(3){
+        top: -100px;
+        left: 30%;
+        animation: animate 2s linear infinite;
+    }  
+    .box div:nth-child(4){
+        top: -100px;
+        left: 5%;
+        animation: animate 2.5s linear infinite;
+        animation-delay: 5s infinite;
+    }
+    .box div:nth-child(5){
+        top: -100px;
+        left: 27%;
+        animation: animate 5s linear infinite;
+    }
+    .box div:nth-child(6){
+        top: -100px;
+        left: 22%;
+        animation: animate 3.5s linear infinite;
+        animation-delay: 2s infinite;
+    }
+    .box div:nth-child(7){
+        top: -100px;
+        left: 15px;
+        animation: animate 6s linear infinite;
+    }
+    .box div:nth-child(8){
+        top: -100px;
+        left: 33%;
+        animation: animate 4s linear infinite;
+    }
+@keyframes animate{
+    0%{
+        transform: scale(1) translateY(0) rotate(0);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1) translateY(80vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/*left side*/
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    font-family: 'robot9000', 'arial';
+    max-height: 100vh;
+}
+.points {
+    width: 100%;
+    padding: 0;
+    background-color: rgb(0, 0, 0,0.5);
+    margin-top: 30px;
+}
+.points p {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    margin: 20px;
+}
+.points .e {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+.clicker img {
+    height: 300px;
+    cursor: url(https://i.imgur.com/yYNG5CL.png),pointer;
+}
+.clicker:hover{
+    transform: scale(1.05);
+  }
+.clicker:active{
+    transform: scale(0.98);
+    height: 300px;
+  }
+.imagine:active{
+  content:url("https://i.imgur.com/CDb0MbV.png");
+}
+.musicctrl img{
+    cursor: url(https://i.imgur.com/yYNG5CL.png),pointer;
+}
+/*PPS counter*/
+.current {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+}
+#current{
+    background-color: #ffffff50;
+    width: 100%;
+    bottom: 0;
+    overflow-y: scroll;
+    direction: rtl;
+}
+
+.center {
+  background: black;
+  margin: 0;
+  z-index: 7;
+}
+
+/*right side*/
+.right {
+    max-height: 100vh;
+    overflow-x: hidden;
+    margin-left: 0px;
+    z-index: 3;
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+.shoptitle {
+    background-color: white;
+    padding: 20px;
+    margin: 0;
+    border-bottom: 5px solid black;
+    position: fixed;
+    width: 57vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.shoptitle p {
+    font-style: bold;
+    font-family: 'robot9000', 'arial';
+    font-size: 30px;
+    margin: 0;
+}
+.musicctrl img{
+    width: 35px;
+}
+
+.shop {
+    height: 100%;
+    margin-top: 80px;
+    overflow-y: scroll;
+}
+.card {
+    min-width: 300px;
+    align-items: space-around;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    padding: 20px;
+    margin: 0;
+    border-radius: 0px;
+    cursor: url(https://i.imgur.com/yYNG5CL.png),pointer;
+    font-family: 'kanit', 'arial';
+
+}
+
+.name {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.info {
+    display: flex;
+    font-size: 18px;
+}
+.card > .info img {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    padding-left: 11px;
+    padding-bottom: 10px;
+    flex-grow: 0;
+}
+.card > .info > .type {
+    padding-left: 50px;
+    min-width: 100px;
+    font-weight: bold;
+
+}
+.card > .info > .detail {
+    padding-left: 20px;
+    overflow-y: scroll;
+    height: 100px;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.card:hover {
+  background-color: white;
+}
+.card .name {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+.card .type {
+    padding-left: 130px;
+}
